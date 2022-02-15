@@ -1,0 +1,23 @@
+<HTML>
+<HEAD><TITLE>Directory Server Form Page</TITLE></HEAD>
+<BODY>
+<CENTER>
+<H1 id="title">Directory Server Form Page</H1>
+
+<H2>Submit a maker</H2>
+<FORM action="directoryserver" method="post">
+<label for="addr">Maker address (host:port) (e.g. myhiddenservice.onion:6102)</label><br/><INPUT type="text" id="addr" name="address" size="80">
+
+<p>
+Select the network:<br/>
+<INPUT type="radio" id="mainnet" name="net" value="mainnet" checked="true"><label for="mainnet">Mainnet</label><br/>
+<INPUT type="radio" id="testnet" name="net" value="testnet"><label for="testnet">Testnet</label><br/>
+<INPUT type="radio" id="signet" name="net" value="signet"><label for="signet">Signet</label><br/>
+</p>
+
+<p><INPUT type="submit" value="Submit"></p>
+</FORM>
+
+</CENTER>
+</BODY>
+</HTML>
