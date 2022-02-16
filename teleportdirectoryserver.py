@@ -18,7 +18,7 @@ TIME_TO_LIVE_DAYS = 1
 
 ERROR_TEXT = "Something went wrong"
 
-NETWORKS = ["mainnet", "testnet", "regtest"]
+NETWORKS = ["mainnet", "testnet", "signet"]
 
 allowed_txt_files = ["/makers-" + n + ".txt" for n in NETWORKS]
 allowed_pages = allowed_txt_files + ["/received", "/submitmaker.html"]
