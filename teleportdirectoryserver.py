@@ -86,7 +86,8 @@ class TeleportDirectoryServerHandler(http.server.SimpleHTTPRequestHandler):
                             refreshed_entry = True
                             entries.append(str(self.expiry_unixtime) + "," + address)
                             print("[" + datetime.now().strftime("%Y-%m-%d %X")
-                                + "] maker refreshed: " + address)
+                                + "] maker refreshed: " + address + " expiry="
+                                + expiry_datetime.strftime("%Y-%m-%d %X"))
                         else:
                             entries.append(file_entry)
             except FileNotFoundError:
@@ -98,7 +99,8 @@ class TeleportDirectoryServerHandler(http.server.SimpleHTTPRequestHandler):
                 with open(filename, "a") as fd:
                     fd.write(str(self.expiry_unixtime) + "," + address + "\n")
                 print("[" + datetime.now().strftime("%Y-%m-%d %X")
-                    + "] maker added: " + address)
+                    + "] maker added: " + address + " expiry="
+                    + expiry_datetime.strftime("%Y-%m-%d %X"))
         self.path = "/received"
         return self.do_GET()
 
