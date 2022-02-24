@@ -18,7 +18,7 @@ TIME_TO_LIVE_DAYS = 1
 
 ERROR_TEXT = "Something went wrong"
 
-NETWORKS = ["mainnet", "testnet", "signet"]
+NETWORKS = ["main", "test", "signet"]
 
 allowed_txt_files = ["/makers-" + n + ".txt" for n in NETWORKS]
 allowed_pages = allowed_txt_files + ["/received", "/submitmaker.html"]
@@ -59,7 +59,7 @@ class TeleportDirectoryServerHandler(http.server.SimpleHTTPRequestHandler):
 
         body = self.rfile.read(int(self.headers["Content-Length"]))
         post_data = parse_qs(body.decode())
-        #post_data = {'address': ['myhiddenservice.onion:6102'], 'net': ['testnet']}
+        #post_data = {'address': ['myhiddenservice.onion:6102'], 'net': ['test']}
 
         address = None
         net = None
